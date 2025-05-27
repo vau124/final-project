@@ -1,19 +1,106 @@
 body {
-    box-sizing: border-box;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     margin: 0;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: #c4acee;
-    color: #ffffff;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-body h1 {
-    width: 80%;
+h1 {
+    color: #ff5555;
     text-align: center;
-    font-size: 80px;
-    font-family: sans-serif;
+    margin-top: 30px;
+    text-shadow: 0 0 10px rgba(255, 85, 85, 0.5);
+}
+.oh{
+    color: #aaaaaa;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+/* Стили для контейнера меню */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+/* Стили для кнопок-ссылок */
+.block {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #2b2b2b, #1f1f1f);
+    color: #ff5555;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+/* Эффекты при наведении */
+.block:hover {
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    color: #ff7777;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+/* Эффекты при нажатии */
+.block:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+/* Анимация "пульсации" */
+.block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 85, 85, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.opa{
+    width: 15%;
+}
+
+.apa{
+    width: 10%;
+}
+
+.tem{
+    color: #f5d3d3bd;
+}
+
+@media (min-width: 320px) {
+h3{font-size:small;}
+h2{font-size:medium;}
+h1{font-size:larger;}
+}
+
+@media (min-width: 700px) {
+h3{font-size:medium;}
+h2{font-size:larger;}
+h1{font-size:x-large;}
+}
+
+@media (min-width: 1024px) {
+h3{font-size:larger;}
+h2{font-size:x-large;}
+h1{font-size:xx-large;}
 }
